@@ -11,17 +11,17 @@ const IndexPage: React.FC = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>Welcome to Aaron’s cooking blog</h1>
+      <h2>Welcome to Aaron’s cooking blog</h2>
       <p>
         This site contains a record of some of my cooking and baking projects.
       </p>
-      <h2>Posts</h2>
+      <h3>Posts</h3>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id}>
           <Link to={node?.fields?.slug ?? ''}>
-            <h3>
+            <h4>
               {node.frontmatter?.title} - {node.frontmatter?.date}
-            </h3>
+            </h4>
           </Link>
           <p>{node.excerpt}</p>
         </div>

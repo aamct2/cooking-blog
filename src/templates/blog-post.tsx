@@ -13,7 +13,7 @@ const BlogPost: React.FC<{ data: BlogPostQuery }> = ({ data }) => {
     <Layout>
       <SEO title={title} />
       <div>
-        <h1>{title}</h1>
+        <h2>{title}</h2>
         <>
           {post?.frontmatter?.tags?.map(tag => {
             return (

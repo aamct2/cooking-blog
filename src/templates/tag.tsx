@@ -18,7 +18,7 @@ const Tags: React.FC<{ pageContext: { tag: string }; data: TagsQuery }> = ({
   return (
     <Layout>
       <SEO title="tagHeader" />
-      <h1>{tagHeader}</h1>
+      <h2>{tagHeader}</h2>
       <OrderedList>
         {edges.map(({ node }) => {
           const slug = node.fields?.slug ?? ''
@@ -30,10 +30,6 @@ const Tags: React.FC<{ pageContext: { tag: string }; data: TagsQuery }> = ({
           )
         })}
       </OrderedList>
-      {/*
-              This links to a page that does not yet exist.
-              You'll come back to it!
-            */}
       <Link to="/tags">All tags</Link>
     </Layout>
   )
