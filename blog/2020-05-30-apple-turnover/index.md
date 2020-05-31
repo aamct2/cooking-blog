@@ -1,6 +1,7 @@
 ---
 title: Apple Turnover
 date: 2020-05-31
+tags: ['pastries']
 ---
 
 Today I made apple turnovers. This was the first time I'd ever made puff pastry from scratch.

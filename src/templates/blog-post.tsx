@@ -1,6 +1,7 @@
 import { BlogPostQuery } from './__generated__/BlogPostQuery'
 import Layout from '../components/layout'
 import React from 'react'
+import { Tag } from 'carbon-components-react'
 import { graphql } from 'gatsby'
 
 const BlogPost: React.FC<{ data: BlogPostQuery }> = ({ data }) => {
@@ -10,6 +11,15 @@ const BlogPost: React.FC<{ data: BlogPostQuery }> = ({ data }) => {
     <Layout>
       <div>
         <h1>{post?.frontmatter?.title ?? 'Missing title'}</h1>
+        <>
+          {post?.frontmatter?.tags?.map(tag => {
+            return (
+              <Tag type="green" key={tag ?? ''}>
+                <p>{tag}</p>
+              </Tag>
+            )
+          })}
+        </>
         <div
           dangerouslySetInnerHTML={{ __html: post?.html ?? 'Missing body' }}
         />
@@ -26,6 +36,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        tags
       }
     }
   }
