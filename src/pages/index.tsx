@@ -26,6 +26,7 @@ const IndexPage: React.FC = () => {
           <p>{node.excerpt}</p>
         </div>
       ))}
+      <Link to="/tags">Tags page</Link>
     </Layout>
   )
 }

@@ -1,16 +1,19 @@
 import { BlogPostQuery } from './__generated__/BlogPostQuery'
 import Layout from '../components/layout'
 import React from 'react'
+import SEO from '../components/seo'
 import { Tag } from 'carbon-components-react'
 import { graphql } from 'gatsby'
 
 const BlogPost: React.FC<{ data: BlogPostQuery }> = ({ data }) => {
   const post = data.markdownRemark
+  const title = post?.frontmatter?.title ?? 'Missing title'
 
   return (
     <Layout>
+      <SEO title={title} />
       <div>
-        <h1>{post?.frontmatter?.title ?? 'Missing title'}</h1>
+        <h1>{title}</h1>
         <>
           {post?.frontmatter?.tags?.map(tag => {
             return (
