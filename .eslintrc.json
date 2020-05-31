@@ -26,7 +26,9 @@
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
     "indent": ["error", 2],
-    "linebreak-style": ["error", "unix"]
+    "linebreak-style": ["error", "unix"],
+    "react/prop-types": "off",
+    "sort-imports": ["error"]
   },
   "settings": {
     "react": {

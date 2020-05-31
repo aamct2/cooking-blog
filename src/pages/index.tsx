@@ -1,9 +1,8 @@
-import React from 'react'
-
-import Layout from '../components/layout'
-import SEO from '../components/seo'
 import { graphql, useStaticQuery } from 'gatsby'
 import { IndexQuery } from './__generated__/IndexQuery'
+import Layout from '../components/layout'
+import React from 'react'
+import SEO from '../components/seo'
 
 const IndexPage: React.FC = () => {
   const data = useStaticQuery(query) as IndexQuery
@@ -11,7 +10,7 @@ const IndexPage: React.FC = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>Welcome to Aaron's cooking blog</h1>
+      <h1>Welcome to Aaron’s cooking blog</h1>
       <p>
         This site contains a record of some of my cooking and baking projects.
       </p>
