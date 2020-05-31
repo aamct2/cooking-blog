@@ -9,6 +9,7 @@
 
 export interface BlogPostQuery_markdownRemark_frontmatter {
   title: string | null
+  date: any | null
   tags: (string | null)[] | null
 }
 

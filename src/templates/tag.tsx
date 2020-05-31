@@ -23,9 +23,12 @@ const Tags: React.FC<{ pageContext: { tag: string }; data: TagsQuery }> = ({
         {edges.map(({ node }) => {
           const slug = node.fields?.slug ?? ''
           const title = node.frontmatter?.title ?? ''
+          const date = node.frontmatter?.date ?? ''
           return (
             <ListItem key={slug}>
-              <Link to={slug}>{title}</Link>
+              <Link to={slug}>
+                {title} - {date}
+              </Link>
             </ListItem>
           )
         })}
@@ -52,6 +55,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            date(formatString: "yyyy-MM-DD")
           }
         }
       }

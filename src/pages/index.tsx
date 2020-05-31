@@ -15,18 +15,24 @@ const IndexPage: React.FC = () => {
       <p>
         This site contains a record of some of my cooking and baking projects.
       </p>
-      <h3>Posts</h3>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.id}>
-          <Link to={node?.fields?.slug ?? ''}>
-            <h4>
-              {node.frontmatter?.title} - {node.frontmatter?.date}
-            </h4>
-          </Link>
-          <p>{node.excerpt}</p>
-        </div>
-      ))}
-      <Link to="/tags">Tags page</Link>
+      <section>
+        <h3>Posts</h3>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <div key={node.id}>
+            <Link to={node?.fields?.slug ?? ''}>
+              <h4>
+                {node.frontmatter?.title} - {node.frontmatter?.date}
+              </h4>
+            </Link>
+            <p>{node.excerpt}</p>
+          </div>
+        ))}
+      </section>
+      <section>
+        <p>
+          <Link to="/tags">Tags page</Link>
+        </p>
+      </section>
     </Layout>
   )
 }

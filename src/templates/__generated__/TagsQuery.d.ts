@@ -13,6 +13,7 @@ export interface TagsQuery_allMarkdownRemark_edges_node_fields {
 
 export interface TagsQuery_allMarkdownRemark_edges_node_frontmatter {
   title: string | null
+  date: any | null
 }
 
 export interface TagsQuery_allMarkdownRemark_edges_node {
