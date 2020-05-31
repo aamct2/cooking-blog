@@ -1,5 +1,7 @@
-import * as path from 'path'
-import { createFilePath } from 'gatsby-source-filesystem'
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const path = require(`path`)
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
