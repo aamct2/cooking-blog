@@ -1,7 +1,7 @@
-import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import Layout from '../components/layout'
 import { BlogPostQuery } from './__generated__/BlogPostQuery'
+import Layout from '../components/layout'
+import React from 'react'
+import { graphql } from 'gatsby'
 
 const BlogPost: React.FC<{ data: BlogPostQuery }> = ({ data }) => {
   const post = data.markdownRemark

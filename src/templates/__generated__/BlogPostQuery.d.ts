@@ -8,18 +8,18 @@
 // ====================================================
 
 export interface BlogPostQuery_markdownRemark_frontmatter {
-  title: string | null;
+  title: string | null
 }
 
 export interface BlogPostQuery_markdownRemark {
-  html: string | null;
-  frontmatter: BlogPostQuery_markdownRemark_frontmatter | null;
+  html: string | null
+  frontmatter: BlogPostQuery_markdownRemark_frontmatter | null
 }
 
 export interface BlogPostQuery {
-  markdownRemark: BlogPostQuery_markdownRemark | null;
+  markdownRemark: BlogPostQuery_markdownRemark | null
 }
 
 export interface BlogPostQueryVariables {
-  slug: string;
+  slug: string
 }

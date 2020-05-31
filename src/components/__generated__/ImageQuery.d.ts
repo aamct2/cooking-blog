@@ -8,21 +8,21 @@
 // ====================================================
 
 export interface ImageQuery_placeholderImage_childImageSharp_fluid {
-  base64: string | null;
-  aspectRatio: number;
-  src: string;
-  srcSet: string;
-  sizes: string;
+  base64: string | null
+  aspectRatio: number
+  src: string
+  srcSet: string
+  sizes: string
 }
 
 export interface ImageQuery_placeholderImage_childImageSharp {
-  fluid: ImageQuery_placeholderImage_childImageSharp_fluid | null;
+  fluid: ImageQuery_placeholderImage_childImageSharp_fluid | null
 }
 
 export interface ImageQuery_placeholderImage {
-  childImageSharp: ImageQuery_placeholderImage_childImageSharp | null;
+  childImageSharp: ImageQuery_placeholderImage_childImageSharp | null
 }
 
 export interface ImageQuery {
-  placeholderImage: ImageQuery_placeholderImage | null;
+  placeholderImage: ImageQuery_placeholderImage | null
 }

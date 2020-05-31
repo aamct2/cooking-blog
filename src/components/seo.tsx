@@ -17,7 +17,7 @@ interface SEOInput {
   title: string
 }
 
-function SEO(seoInput: SEOInput) {
+function SEO(seoInput: SEOInput): JSX.Element {
   const { site } = useStaticQuery(
     graphql`
       query SEOQuery {
