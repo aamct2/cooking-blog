@@ -1027,6 +1027,16 @@
                   "defaultValue": null
                 },
                 {
+                  "name": "context",
+                  "description": "",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "SitePageContextFilterInput",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
                   "name": "pluginCreator",
                   "description": "",
                   "type": {
@@ -1512,6 +1522,16 @@
                   "type": {
                     "kind": "INPUT_OBJECT",
                     "name": "StringQueryOperatorInput",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "fields",
+                  "description": "",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "MarkdownRemarkFieldsFilterInput",
                     "ofType": null
                   },
                   "defaultValue": null
@@ -3420,6 +3440,16 @@
               "defaultValue": null
             },
             {
+              "name": "fields",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "MarkdownRemarkFieldsFilterInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
               "name": "html",
               "description": "",
               "type": {
@@ -3546,6 +3576,27 @@
               "type": {
                 "kind": "INPUT_OBJECT",
                 "name": "DateQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "MarkdownRemarkFieldsFilterInput",
+          "description": null,
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "slug",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "StringQueryOperatorInput",
                 "ofType": null
               },
               "defaultValue": null
@@ -7313,6 +7364,18 @@
               "deprecationReason": null
             },
             {
+              "name": "fields",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "MarkdownRemarkFields",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "html",
               "description": null,
               "args": [],
@@ -7640,6 +7703,29 @@
               "deprecationReason": null
             }
           ],
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "MarkdownRemarkFields",
+          "description": null,
+          "fields": [
+            {
+              "name": "slug",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
           "possibleTypes": null
         },
         {
@@ -9539,6 +9625,12 @@
             },
             {
               "name": "childMarkdownRemark___fileAbsolutePath",
+              "description": null,
+              "isDeprecated": true,
+              "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
+            },
+            {
+              "name": "childMarkdownRemark___fields___slug",
               "description": null,
               "isDeprecated": true,
               "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
@@ -12731,6 +12823,27 @@
         },
         {
           "kind": "INPUT_OBJECT",
+          "name": "SitePageContextFilterInput",
+          "description": null,
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "slug",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "StringQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
           "name": "SitePluginFilterInput",
           "description": null,
           "fields": null,
@@ -13440,6 +13553,18 @@
               "deprecationReason": null
             },
             {
+              "name": "context",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "OBJECT",
+                "name": "SitePageContext",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "pluginCreator",
               "description": null,
               "args": [],
@@ -13484,6 +13609,29 @@
               "ofType": null
             }
           ],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "SitePageContext",
+          "description": null,
+          "fields": [
+            {
+              "name": "slug",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
           "enumValues": null,
           "possibleTypes": null
         },
@@ -14218,6 +14366,16 @@
               "defaultValue": null
             },
             {
+              "name": "context",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "SitePageContextFilterInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
               "name": "pluginCreator",
               "description": "",
               "type": {
@@ -14847,6 +15005,12 @@
             },
             {
               "name": "isCreatedByStatefulCreatePages",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "context___slug",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -18402,6 +18566,12 @@
             },
             {
               "name": "fileAbsolutePath",
+              "description": null,
+              "isDeprecated": true,
+              "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
+            },
+            {
+              "name": "fields___slug",
               "description": null,
               "isDeprecated": true,
               "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."

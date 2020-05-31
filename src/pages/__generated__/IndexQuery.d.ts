@@ -12,9 +12,14 @@ export interface IndexQuery_allMarkdownRemark_edges_node_frontmatter {
   date: any | null;
 }
 
+export interface IndexQuery_allMarkdownRemark_edges_node_fields {
+  slug: string | null;
+}
+
 export interface IndexQuery_allMarkdownRemark_edges_node {
   id: string;
   frontmatter: IndexQuery_allMarkdownRemark_edges_node_frontmatter | null;
+  fields: IndexQuery_allMarkdownRemark_edges_node_fields | null;
   excerpt: string | null;
 }
 
