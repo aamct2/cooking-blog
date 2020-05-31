@@ -16,14 +16,14 @@ const IndexPage: React.FC = () => {
       </p>
       <h2>Posts</h2>
       {data.allMarkdownRemark.edges.map(({ node }) => (
-        <>
+        <div key={node.id}>
           <Link to={node?.fields?.slug ?? ''}>
             <h3>
               {node.frontmatter?.title} - {node.frontmatter?.date}
             </h3>
           </Link>
           <p>{node.excerpt}</p>
-        </>
+        </div>
       ))}
     </Layout>
   )
