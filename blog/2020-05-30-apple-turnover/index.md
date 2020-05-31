@@ -3,7 +3,9 @@ title: Apple Turnover
 date: 2020-05-31
 ---
 
-Today I made apple turnovers.
+Today I made apple turnovers. This was the first time I'd ever made puff pastry from scratch.
+
+In this recipe, I made inverse puff pastry and used my wife's homemade apple sauce for the filling.
 
 ![Apple turnovers on a cooling rack](apple_turnovers_cooling.jpg)
 
