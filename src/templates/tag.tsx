@@ -1,5 +1,4 @@
 import { Link, graphql } from 'gatsby'
-import { ListItem, OrderedList } from 'carbon-components-react'
 import Layout from '../components/layout'
 import React from 'react'
 import SEO from '../components/seo'
@@ -19,20 +18,20 @@ const Tags: React.FC<{ pageContext: { tag: string }; data: TagsQuery }> = ({
     <Layout>
       <SEO title="tagHeader" />
       <h2>{tagHeader}</h2>
-      <OrderedList>
+      <ol>
         {edges.map(({ node }) => {
           const slug = node.fields?.slug ?? ''
           const title = node.frontmatter?.title ?? ''
           const date = node.frontmatter?.date ?? ''
           return (
-            <ListItem key={slug}>
+            <li key={slug}>
               <Link to={slug}>
                 {title} - {date}
               </Link>
-            </ListItem>
+            </li>
           )
         })}
-      </OrderedList>
+      </ol>
       <Link to="/tags">All tags</Link>
     </Layout>
   )

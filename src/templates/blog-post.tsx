@@ -2,7 +2,7 @@ import { BlogPostQuery } from './__generated__/BlogPostQuery'
 import Layout from '../components/layout'
 import React from 'react'
 import SEO from '../components/seo'
-import { Tag } from 'carbon-components-react'
+import Tag from '../components/tag'
 import { graphql } from 'gatsby'
 
 const BlogPost: React.FC<{ data: BlogPostQuery }> = ({ data }) => {

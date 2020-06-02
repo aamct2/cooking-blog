@@ -2,7 +2,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import React from 'react'
 import SEO from '../components/seo'
-import { Tag } from 'carbon-components-react'
+import Tag from '../components/tag'
 import { TagsPageQuery } from './__generated__/TagsPageQuery'
 import kebabCase from 'lodash/kebabCase'
 

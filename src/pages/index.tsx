@@ -1,4 +1,3 @@
-import './index.scss'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import { IndexQuery } from './__generated__/IndexQuery'
 import Layout from '../components/layout'
