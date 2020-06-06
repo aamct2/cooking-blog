@@ -1,9 +1,9 @@
 import './tags.scss'
 import { Link, graphql } from 'gatsby'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import React from 'react'
-import SEO from '../components/seo'
-import Tag from '../components/tag'
+import SEO from '../components/SEO'
+import Tag from '../components/Tag'
 import { TagsPageQuery } from './__generated__/TagsPageQuery'
 import kebabCase from 'lodash/kebabCase'
 

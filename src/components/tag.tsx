@@ -1,4 +1,4 @@
-import './tag.scss'
+import './Tag.scss'
 import React from 'react'
 
 /**

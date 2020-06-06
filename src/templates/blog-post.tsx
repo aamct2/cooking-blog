@@ -1,9 +1,9 @@
 import { Link, graphql } from 'gatsby'
 import { BlogPostQuery } from './__generated__/BlogPostQuery'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import React from 'react'
-import SEO from '../components/seo'
-import Tag from '../components/tag'
+import SEO from '../components/SEO'
+import Tag from '../components/Tag'
 import kebabCase from 'lodash/kebabCase'
 
 /**

@@ -1,9 +1,9 @@
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import BlogSummary from '../components/blog-summary'
+import BlogSummary from '../components/BlogSummary'
 import { IndexQuery } from './__generated__/IndexQuery'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import React from 'react'
-import SEO from '../components/seo'
+import SEO from '../components/SEO'
 
 /**
  * Home page of the website
