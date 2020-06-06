@@ -44,7 +44,7 @@ export default IndexPage
 export const query = graphql`
   query IndexQuery {
     allMarkdownRemark(
-      limit: 20
+      limit: 5
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       totalCount
