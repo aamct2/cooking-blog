@@ -19,7 +19,7 @@ const IndexPage: React.FC = () => {
         This site contains a record of some of my cooking and baking projects.
       </p>
       <section>
-        <h3>Posts</h3>
+        <h3>Recent Posts</h3>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <BlogSummary
             date={node.frontmatter.date}
