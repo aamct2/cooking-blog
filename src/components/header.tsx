@@ -1,6 +1,10 @@
 import { Link } from 'gatsby'
 import React from 'react'
 
+/**
+ * Header of a page
+ * @param siteTitle Title of the website
+ */
 const Header: React.FC<{ siteTitle: string }> = ({ siteTitle }) => (
   <header>
     <div>

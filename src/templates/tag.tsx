@@ -4,6 +4,9 @@ import React from 'react'
 import SEO from '../components/seo'
 import { TagsQuery } from './__generated__/TagsQuery'
 
+/**
+ * Page template for a given tag, listing all the related posts
+ */
 const Tags: React.FC<{ pageContext: { tag: string }; data: TagsQuery }> = ({
   pageContext,
   data,

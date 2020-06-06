@@ -7,6 +7,9 @@ import Tag from '../components/tag'
 import { TagsPageQuery } from './__generated__/TagsPageQuery'
 import kebabCase from 'lodash/kebabCase'
 
+/**
+ * Page listing all of the tags used throughout the blog
+ */
 const TagsPage: React.FC<{ data: TagsPageQuery }> = ({ data }) => {
   const group = data.allMarkdownRemark.group
   const title = data.site?.siteMetadata?.title ?? ''

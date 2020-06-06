@@ -11,6 +11,9 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { SiteTitleQuery } from './__generated__/SiteTitleQuery'
 
+/**
+ * Standard page layout template
+ */
 const Layout: React.FC<{ children: any }> = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {

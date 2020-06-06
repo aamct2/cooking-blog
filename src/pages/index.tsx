@@ -5,6 +5,9 @@ import Layout from '../components/layout'
 import React from 'react'
 import SEO from '../components/seo'
 
+/**
+ * Home page of the website
+ */
 const IndexPage: React.FC = () => {
   const data = useStaticQuery(query) as IndexQuery
 

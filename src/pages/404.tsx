@@ -2,6 +2,9 @@ import Layout from '../components/layout'
 import React from 'react'
 import SEO from '../components/seo'
 
+/**
+ * 404 page
+ */
 const NotFoundPage = (): JSX.Element => (
   <Layout>
     <SEO title="404: Not found" />

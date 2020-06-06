@@ -6,6 +6,9 @@ import SEO from '../components/seo'
 import Tag from '../components/tag'
 import kebabCase from 'lodash/kebabCase'
 
+/**
+ * Page template for a single blog post
+ */
 const BlogPost: React.FC<{ data: BlogPostQuery }> = ({ data }) => {
   const post = data.markdownRemark
   const title = post?.frontmatter?.title ?? 'Missing title'
