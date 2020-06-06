@@ -6,6 +6,7 @@
  */
 
 import { graphql, useStaticQuery } from 'gatsby'
+import Footer from './Footer'
 import Header from './Header'
 import NavBar from './NavBar'
 import React from 'react'
@@ -30,10 +31,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       <NavBar />
       <Header siteTitle={data.site?.siteMetadata?.title ?? ''} />
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with{' '}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
+      <Footer />
     </>
   )
 }
