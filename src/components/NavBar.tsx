@@ -11,6 +11,10 @@ const NavigationLinks = [
     name: 'Blog',
   },
   {
+    to: '/tags',
+    name: 'Tags',
+  },
+  {
     to: '/about',
     name: 'About',
   },

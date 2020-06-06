@@ -30,11 +30,6 @@ const IndexPage: React.FC = () => {
           />
         ))}
       </section>
-      <section>
-        <p>
-          <Link to="/tags">Tags page</Link>
-        </p>
-      </section>
     </Layout>
   )
 }
