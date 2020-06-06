@@ -26,8 +26,6 @@
   "plugins": ["jsdoc", "react", "@typescript-eslint"],
   "rules": {
     "indent": ["error", 2],
-    "linebreak-style": ["error", "unix"],
-    "react/prop-types": "off",
     "jsdoc/require-jsdoc": [
       "error",
       {
@@ -41,7 +39,11 @@
         }
       }
     ],
-    "sort-imports": ["error"]
+    "sort-imports": ["error"],
+    "linebreak-style": ["error", "unix"],
+    "no-else-return": "error",
+    "no-useless-return": "error",
+    "react/prop-types": "off"
   },
   "settings": {
     "react": {
