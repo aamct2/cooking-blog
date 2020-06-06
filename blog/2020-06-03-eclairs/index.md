@@ -1,7 +1,7 @@
 ---
 title: Éclairs
 date: 2020-06-03
-tags: ['pastries']
+tags: ['pastries', 'creams']
 ---
 
 I made éclairs with a vanilla cream filling and a coffee fondant icing.
