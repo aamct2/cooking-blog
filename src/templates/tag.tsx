@@ -16,7 +16,10 @@ const Tags: React.FC<{ pageContext: { tag: string }; data: TagsQuery }> = ({
 
   return (
     <Layout>
-      <SEO title="tagHeader" />
+      <SEO
+        title={tag}
+        description={`List of blog posts tagged with '${tag}'`}
+      />
       <h2>{tagHeader}</h2>
       <ol>
         {edges.map(({ node }) => {

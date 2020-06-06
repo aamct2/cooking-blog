@@ -15,6 +15,7 @@ interface SEOInput {
   lang?: string
   meta?: any
   title: string
+  type?: string
 }
 
 function SEO(seoInput: SEOInput): JSX.Element {
@@ -35,8 +36,9 @@ function SEO(seoInput: SEOInput): JSX.Element {
   const metaDescription =
     (seoInput.description || site?.siteMetadata?.description) ?? ''
   const lang = seoInput.lang ?? 'en'
-  const title = seoInput.title
   const meta = seoInput.meta ?? []
+  const title = seoInput.title
+  const type = seoInput.type ?? 'website'
 
   return (
     <Helmet
@@ -60,7 +62,7 @@ function SEO(seoInput: SEOInput): JSX.Element {
         },
         {
           property: 'og:type',
-          content: 'website',
+          content: type,
         },
         {
           name: 'twitter:card',

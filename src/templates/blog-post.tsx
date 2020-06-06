@@ -11,10 +11,16 @@ const BlogPost: React.FC<{ data: BlogPostQuery }> = ({ data }) => {
   const title = post?.frontmatter?.title ?? 'Missing title'
   const date = (post?.frontmatter?.date as string) ?? ''
   const tags = (post?.frontmatter?.tags ?? []).sort()
+  const tagsSEO = tags.map(tag => {
+    return {
+      name: 'article:tag',
+      content: tag ?? '',
+    }
+  })
 
   return (
     <Layout>
-      <SEO title={title} />
+      <SEO title={title} type="article" meta={tagsSEO} />
       <article>
         <h2>{title}</h2>
         <time dateTime={date}>{date}</time>
