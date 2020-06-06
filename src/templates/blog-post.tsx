@@ -1,14 +1,16 @@
+import { Link, graphql } from 'gatsby'
 import { BlogPostQuery } from './__generated__/BlogPostQuery'
 import Layout from '../components/layout'
 import React from 'react'
 import SEO from '../components/seo'
 import Tag from '../components/tag'
-import { graphql } from 'gatsby'
+import kebabCase from 'lodash/kebabCase'
 
 const BlogPost: React.FC<{ data: BlogPostQuery }> = ({ data }) => {
   const post = data.markdownRemark
   const title = post?.frontmatter?.title ?? 'Missing title'
   const date = (post?.frontmatter?.date as string) ?? ''
+  const tags = (post?.frontmatter?.tags ?? []).sort()
 
   return (
     <Layout>
@@ -18,11 +20,11 @@ const BlogPost: React.FC<{ data: BlogPostQuery }> = ({ data }) => {
         <time dateTime={date}>{date}</time>
         <section>
           <>
-            {post?.frontmatter?.tags?.map(tag => {
+            {tags.map(tag => {
               return (
-                <Tag type="green" key={tag ?? ''}>
-                  <p>{tag}</p>
-                </Tag>
+                <Link to={`/tags/${kebabCase(tag ?? '')}/`} key={tag ?? ''}>
+                  <Tag>{tag}</Tag>
+                </Link>
               )
             })}
           </>

@@ -42,7 +42,7 @@
     "develop": "gatsby develop",
     "format": "npm run format:eslint && npm run format:prettier",
     "format:eslint": "eslint --fix \"**/*.{js,jsx,ts,tsx,json}\"",
-    "format:prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format:prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,scss}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",

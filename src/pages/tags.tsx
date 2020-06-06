@@ -1,3 +1,4 @@
+import './tags.scss'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import React from 'react'
@@ -15,11 +16,11 @@ const TagsPage: React.FC<{ data: TagsPageQuery }> = ({ data }) => {
       <SEO title={title} />
       <div>
         <h2>Tags</h2>
-        <ul>
+        <ul className="TagsList">
           {group.map(tag => (
             <li key={tag.fieldValue ?? ''}>
               <Link to={`/tags/${kebabCase(tag.fieldValue ?? '')}/`}>
-                <Tag type="green">
+                <Tag>
                   {tag.fieldValue} ({tag.totalCount})
                 </Tag>
               </Link>
