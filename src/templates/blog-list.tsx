@@ -22,6 +22,8 @@ const BlogList: React.FC<{
 
   return (
     <Layout>
+      <h2>Blog</h2>
+
       {posts.map(({ node }) => {
         return (
           <BlogSummary
