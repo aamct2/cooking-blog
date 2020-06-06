@@ -12,11 +12,10 @@ import kebabCase from 'lodash/kebabCase'
  */
 const TagsPage: React.FC<{ data: TagsPageQuery }> = ({ data }) => {
   const group = data.allMarkdownRemark.group
-  const title = data.site?.siteMetadata?.title ?? ''
 
   return (
     <Layout>
-      <SEO title={title} />
+      <SEO title="Tags" />
       <div>
         <h2>Tags</h2>
         <ul className="TagsList">
@@ -39,11 +38,6 @@ export default TagsPage
 
 export const pageQuery = graphql`
   query TagsPageQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(limit: 2000) {
       group(field: frontmatter___tags) {
         fieldValue

@@ -1,4 +1,4 @@
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import BlogSummary from '../components/BlogSummary'
 import { IndexQuery } from './__generated__/IndexQuery'
 import Layout from '../components/Layout'

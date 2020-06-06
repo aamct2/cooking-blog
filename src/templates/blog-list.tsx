@@ -3,6 +3,7 @@ import { BlogListQuery } from './__generated__/BlogListQuery'
 import BlogSummary from '../components/BlogSummary'
 import Layout from '../components/Layout'
 import React from 'react'
+import SEO from '../components/SEO'
 
 /**
  * Template page containing a list of blog posts
@@ -22,6 +23,7 @@ const BlogList: React.FC<{
 
   return (
     <Layout>
+      <SEO title="Blog" />
       <h2>Blog</h2>
 
       {posts.map(({ node }) => {
