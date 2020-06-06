@@ -8,14 +8,14 @@
 // ====================================================
 
 export interface BlogPostQuery_markdownRemark_frontmatter {
-  title: string | null
-  date: any | null
+  title: string
+  date: any
   tags: (string | null)[] | null
 }
 
 export interface BlogPostQuery_markdownRemark {
   html: string | null
-  frontmatter: BlogPostQuery_markdownRemark_frontmatter | null
+  frontmatter: BlogPostQuery_markdownRemark_frontmatter
 }
 
 export interface BlogPostQuery {

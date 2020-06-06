@@ -6,7 +6,6 @@ module.exports = {
     author: '@gatsbyjs',
   },
   plugins: [
-    'gatsby-plugin-codegen',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
@@ -49,5 +48,6 @@ module.exports = {
         path: `${__dirname}/blog/`,
       },
     },
+    'gatsby-plugin-codegen',
   ],
 }

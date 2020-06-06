@@ -5,6 +5,32 @@ const _ = require('lodash')
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { createFilePath } = require('gatsby-source-filesystem')
 
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    """
+    Markdown Node
+    """
+    type MarkdownRemark implements Node @infer {
+      fields: MarkdownRemarkFields!
+      frontmatter: Frontmatter!
+    }
+
+    type MarkdownRemarkFields @infer {
+      slug: String!
+    }
+
+    """
+    Markdown Frontmatter
+    """
+    type Frontmatter @infer {
+      title: String!
+      date: Date! @dateformat
+    }
+  `
+  createTypes(typeDefs)
+}
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === 'MarkdownRemark') {

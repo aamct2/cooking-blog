@@ -8,18 +8,18 @@
 // ====================================================
 
 export interface IndexQuery_allMarkdownRemark_edges_node_frontmatter {
-  title: string | null
-  date: any | null
+  title: string
+  date: any
 }
 
 export interface IndexQuery_allMarkdownRemark_edges_node_fields {
-  slug: string | null
+  slug: string
 }
 
 export interface IndexQuery_allMarkdownRemark_edges_node {
   id: string
-  frontmatter: IndexQuery_allMarkdownRemark_edges_node_frontmatter | null
-  fields: IndexQuery_allMarkdownRemark_edges_node_fields | null
+  frontmatter: IndexQuery_allMarkdownRemark_edges_node_frontmatter
+  fields: IndexQuery_allMarkdownRemark_edges_node_fields
   excerpt: string | null
 }
 

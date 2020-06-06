@@ -1,4 +1,5 @@
 import { Link, graphql, useStaticQuery } from 'gatsby'
+import BlogSummary from '../components/blog-summary'
 import { IndexQuery } from './__generated__/IndexQuery'
 import Layout from '../components/layout'
 import React from 'react'
@@ -17,14 +18,13 @@ const IndexPage: React.FC = () => {
       <section>
         <h3>Posts</h3>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link to={node?.fields?.slug ?? ''}>
-              <h4>
-                {node.frontmatter?.title} - {node.frontmatter?.date}
-              </h4>
-            </Link>
-            <p>{node.excerpt}</p>
-          </div>
+          <BlogSummary
+            date={node.frontmatter.date}
+            excerpt={node.excerpt}
+            key={node.id}
+            slug={node.fields.slug}
+            title={node.frontmatter.title}
+          />
         ))}
       </section>
       <section>

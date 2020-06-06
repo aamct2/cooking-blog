@@ -20,9 +20,9 @@ const Tags: React.FC<{ pageContext: { tag: string }; data: TagsQuery }> = ({
       <h2>{tagHeader}</h2>
       <ol>
         {edges.map(({ node }) => {
-          const slug = node.fields?.slug ?? ''
-          const title = node.frontmatter?.title ?? ''
-          const date = node.frontmatter?.date ?? ''
+          const slug = node.fields.slug
+          const title = node.frontmatter.title
+          const date = node.frontmatter.date
           return (
             <li key={slug}>
               <Link to={slug}>

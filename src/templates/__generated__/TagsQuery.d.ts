@@ -8,17 +8,17 @@
 // ====================================================
 
 export interface TagsQuery_allMarkdownRemark_edges_node_fields {
-  slug: string | null
+  slug: string
 }
 
 export interface TagsQuery_allMarkdownRemark_edges_node_frontmatter {
-  title: string | null
-  date: any | null
+  title: string
+  date: any
 }
 
 export interface TagsQuery_allMarkdownRemark_edges_node {
-  fields: TagsQuery_allMarkdownRemark_edges_node_fields | null
-  frontmatter: TagsQuery_allMarkdownRemark_edges_node_frontmatter | null
+  fields: TagsQuery_allMarkdownRemark_edges_node_fields
+  frontmatter: TagsQuery_allMarkdownRemark_edges_node_frontmatter
 }
 
 export interface TagsQuery_allMarkdownRemark_edges {
