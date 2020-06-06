@@ -5,6 +5,9 @@ const _ = require('lodash')
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { createFilePath } = require('gatsby-source-filesystem')
 
+/**
+ * Creates additional types in the Gatsby GraphQL schema
+ */
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
@@ -31,6 +34,9 @@ exports.createSchemaCustomization = ({ actions }) => {
   createTypes(typeDefs)
 }
 
+/**
+ * Adds the `slug` to post nodes
+ */
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === 'MarkdownRemark') {
@@ -43,6 +49,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
+/**
+ * Autogenerates pages for the website
+ */
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
