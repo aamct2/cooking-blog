@@ -14,7 +14,7 @@ import { SiteTitleQuery } from './__generated__/SiteTitleQuery'
 /**
  * Standard page layout template
  */
-const Layout: React.FC<{ children: any }> = ({ children }) => {
+const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
