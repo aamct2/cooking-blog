@@ -1,15 +1,21 @@
+@use '../styles/colors';
+
 header {
   align-items: center;
+  background-color: colors.$blue-yonder;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
-  padding-bottom: 1em;
-  padding-top: 1em;
+  padding: 1em;
 
   .SiteTitle {
     font-size: 1em;
     grid-column: 1 / 3;
     grid-row: 1;
+
+    a {
+      color: white;
+    }
   }
 
   NavBar {

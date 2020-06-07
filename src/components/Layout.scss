@@ -1,6 +1,10 @@
 .PageWrapper {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  margin: 1em;
-  min-height: calc(100vh - 2em);
+  min-height: 100vh;
+
+  main {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 }
