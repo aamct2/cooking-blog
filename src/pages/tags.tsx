@@ -1,10 +1,10 @@
 import './tags.scss'
-import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import React from 'react'
 import SEO from '../components/SEO'
 import Tag from '../components/Tag'
 import { TagsPageQuery } from './__generated__/TagsPageQuery'
+import { graphql } from 'gatsby'
 import kebabCase from 'lodash/kebabCase'
 
 /**
@@ -21,11 +21,10 @@ const TagsPage: React.FC<{ data: TagsPageQuery }> = ({ data }) => {
         <ul className="TagsList">
           {group.map(tag => (
             <li key={tag.fieldValue ?? ''}>
-              <Link to={`/tags/${kebabCase(tag.fieldValue ?? '')}/`}>
-                <Tag>
-                  {tag.fieldValue} ({tag.totalCount})
-                </Tag>
-              </Link>
+              <Tag
+                link={`/tags/${kebabCase(tag.fieldValue ?? '')}`}
+                name={`${tag.fieldValue} (${tag.totalCount})`}
+              />
             </li>
           ))}
         </ul>

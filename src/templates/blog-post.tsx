@@ -1,10 +1,10 @@
 import './blog-post.scss'
-import { Link, graphql } from 'gatsby'
 import { BlogPostQuery } from './__generated__/BlogPostQuery'
 import Layout from '../components/Layout'
 import React from 'react'
 import SEO from '../components/SEO'
 import Tag from '../components/Tag'
+import { graphql } from 'gatsby'
 import kebabCase from 'lodash/kebabCase'
 
 /**
@@ -33,9 +33,10 @@ const BlogPost: React.FC<{ data: BlogPostQuery }> = ({ data }) => {
             {tags.map(tag => {
               return (
                 <li key={tag ?? ''}>
-                  <Link to={`/tags/${kebabCase(tag ?? '')}/`}>
-                    <Tag>{tag}</Tag>
-                  </Link>
+                  <Tag
+                    link={`/tags/${kebabCase(tag ?? '')}/`}
+                    name={tag ?? ''}
+                  />
                 </li>
               )
             })}
