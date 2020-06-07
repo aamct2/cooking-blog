@@ -3,7 +3,10 @@
 footer {
   background-color: colors.$ui-05;
   color: colors.$ui-05-text;
-  padding: 1em;
+  padding-bottom: calc(1em + env(safe-area-inset-bottom));
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1em;
   text-align: center;
 
   a {
