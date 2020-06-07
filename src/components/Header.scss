@@ -6,7 +6,10 @@ header {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
-  padding: 1em;
+  padding-bottom: 1em;
+  padding-left: max(1em, env(safe-area-inset-left));
+  padding-right: max(1em, env(safe-area-inset-right));
+  padding-top: 1em;
 
   a {
     color: colors.$ui-05-text;
