@@ -23,6 +23,8 @@ $buff-80: color.scale($buff, $lightness: -80%); // 80% darker
 *  Core tokens  *
 ****************/
 
+/// Default page background
+$ui-background: white;
 /// Primary interactive elements/buttons
 $interactive-01: $buff;
 /// Pimrary interactive elements/buttons - hover state
@@ -33,6 +35,8 @@ $interactive-01-text: $buff-80;
 $ui-05: $blue-yonder;
 /// Text on high contrast background
 $ui-05-text: white;
+/// Primary links
+$link-01: $dark-cornflower-blue;
 
 /// Primary text
 $text-01: black;
