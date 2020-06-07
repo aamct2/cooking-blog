@@ -1,3 +1,4 @@
+import './Layout.scss'
 import { graphql, useStaticQuery } from 'gatsby'
 import Footer from './Footer'
 import Header from './Header'
@@ -19,12 +20,11 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   `) as SiteTitleQuery
 
   return (
-    <>
-      {/* <NavBar /> */}
+    <div className="PageWrapper">
       <Header siteTitle={data.site?.siteMetadata?.title ?? ''} />
       <main>{children}</main>
       <Footer />
-    </>
+    </div>
   )
 }
 
