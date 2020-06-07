@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import React from 'react'
 import SEO from '../components/SEO'
 import { TagsQuery } from './__generated__/TagsQuery'
+import upperFirst from 'lodash/upperFirst'
 
 /**
  * Page template for a given tag, listing all the related posts
@@ -20,7 +21,7 @@ const Tags: React.FC<{ pageContext: { tag: string }; data: TagsQuery }> = ({
   return (
     <Layout>
       <SEO
-        title={tag}
+        title={upperFirst(tag)}
         description={`List of blog posts tagged with '${tag}'`}
       />
       <h1>{tagHeader}</h1>
