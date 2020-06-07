@@ -6,6 +6,7 @@
   },
   "extends": [
     "eslint:recommended",
+    "plugin:jsx-a11y/recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
@@ -23,7 +24,7 @@
     "ecmaVersion": 11,
     "sourceType": "module"
   },
-  "plugins": ["jsdoc", "react", "@typescript-eslint"],
+  "plugins": ["jsdoc", "jsx-a11y", "react", "@typescript-eslint"],
   "rules": {
     "indent": ["error", 2],
     "jsdoc/require-jsdoc": [
