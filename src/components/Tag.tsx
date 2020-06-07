@@ -7,7 +7,7 @@ import React from 'react'
  */
 const Tag: React.FC<{ link: string; name: string }> = ({ link, name }) => {
   return (
-    <Link to={link}>
+    <Link to={link} className="TagLink">
       <div className="Tag">{name}</div>
     </Link>
   )

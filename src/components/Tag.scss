@@ -1,5 +1,9 @@
+@use '../styles/colors';
+@use "sass:color";
+
 .Tag {
   align-items: center;
+  background-color: colors.$buff;
   border-color: black;
   border-radius: 1rem;
   border-width: thin;
@@ -15,4 +19,13 @@
   &:not(:first-child) {
     margin-left: 0;
   }
+
+  &:hover {
+    background-color: color.scale(colors.$buff, $lightness: -30%);
+  }
+}
+
+.TagLink {
+  text-decoration: none;
+  color: black;
 }
