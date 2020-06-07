@@ -8,13 +8,13 @@
 // ====================================================
 
 export interface SEOQuery_site_siteMetadata {
-  title: string | null
-  description: string | null
-  author: string | null
+  title: string
+  description: string
+  author: string
 }
 
 export interface SEOQuery_site {
-  siteMetadata: SEOQuery_site_siteMetadata | null
+  siteMetadata: SEOQuery_site_siteMetadata
 }
 
 export interface SEOQuery {

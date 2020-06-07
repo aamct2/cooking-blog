@@ -21,7 +21,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   return (
     <div className="PageWrapper">
-      <Header siteTitle={data.site?.siteMetadata?.title ?? ''} />
+      <Header siteTitle={data.site?.siteMetadata.title ?? ''} />
       <main>{children}</main>
       <Footer />
     </div>

@@ -8,11 +8,11 @@
 // ====================================================
 
 export interface SiteTitleQuery_site_siteMetadata {
-  title: string | null
+  title: string
 }
 
 export interface SiteTitleQuery_site {
-  siteMetadata: SiteTitleQuery_site_siteMetadata | null
+  siteMetadata: SiteTitleQuery_site_siteMetadata
 }
 
 export interface SiteTitleQuery {

@@ -70,7 +70,7 @@ function SEO(seoInput: SEOInput): JSX.Element {
   ) as SEOQuery
 
   const metaDescription =
-    (seoInput.description || site?.siteMetadata?.description) ?? ''
+    (seoInput.description || site?.siteMetadata.description) ?? ''
   const lang = seoInput.lang ?? 'en'
   const meta = seoInput.meta ?? []
   const title = seoInput.title
@@ -82,7 +82,7 @@ function SEO(seoInput: SEOInput): JSX.Element {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site?.siteMetadata?.title ?? ''}`}
+      titleTemplate={`%s | ${site?.siteMetadata.title ?? ''}`}
       meta={[
         {
           name: 'description',
@@ -106,7 +106,7 @@ function SEO(seoInput: SEOInput): JSX.Element {
         },
         {
           name: 'twitter:creator',
-          content: site?.siteMetadata?.author ?? '',
+          content: site?.siteMetadata.author ?? '',
         },
         {
           name: 'twitter:title',

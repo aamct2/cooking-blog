@@ -14,7 +14,8 @@ import kebabCase from 'lodash/kebabCase'
  */
 function blogSEO(
   title: string,
-  date: string
+  date: string,
+  author: string
 ): {
   type: string
   content: string
@@ -24,6 +25,7 @@ function blogSEO(
     content: JSON.stringify({
       '@context': 'http://schema.org',
       '@type': 'BlogPosting',
+      author: author,
       datePublished: date,
       name: title,
       headline: title,
@@ -35,9 +37,10 @@ function blogSEO(
  * Page template for a single blog post
  */
 const BlogPost: React.FC<{ data: BlogPostQuery }> = ({ data }) => {
-  const post = data.markdownRemark
-  const title = post?.frontmatter?.title ?? 'Missing title'
-  const date = (post?.frontmatter?.date as string) ?? ''
+  const post = data.post
+  const title = post?.frontmatter.title ?? 'Missing title'
+  const date = (post?.frontmatter.date as string) ?? ''
+  const author = data.siteData?.siteMetadata.author ?? ''
   const tags = (post?.frontmatter?.tags ?? []).sort()
   const tagsSEO = tags.map(tag => {
     return {
@@ -45,7 +48,7 @@ const BlogPost: React.FC<{ data: BlogPostQuery }> = ({ data }) => {
       content: tag ?? '',
     }
   })
-  const schemaSEO = blogSEO(title, date)
+  const schemaSEO = blogSEO(title, date, author)
 
   return (
     <Layout>
@@ -79,7 +82,12 @@ export default BlogPost
 
 export const query = graphql`
   query BlogPostQuery($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    siteData: site {
+      siteMetadata {
+        author
+      }
+    }
+    post: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         title
