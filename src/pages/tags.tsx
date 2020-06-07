@@ -17,7 +17,7 @@ const TagsPage: React.FC<{ data: TagsPageQuery }> = ({ data }) => {
     <Layout>
       <SEO title="Tags" />
       <div>
-        <h2>Tags</h2>
+        <h1>Tags</h1>
         <ul className="TagsList">
           {group.map(tag => (
             <li key={tag.fieldValue ?? ''}>

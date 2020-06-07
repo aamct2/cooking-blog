@@ -14,12 +14,12 @@ const IndexPage: React.FC = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h2>Welcome to Aaron’s cooking blog</h2>
+      <h1>Welcome to Aaron’s cooking blog</h1>
       <p>
         This site contains a record of some of my cooking and baking projects.
       </p>
       <section>
-        <h3>Recent Posts</h3>
+        <h2>Recent Posts</h2>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <BlogSummary
             date={node.frontmatter.date}

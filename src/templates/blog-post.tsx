@@ -25,7 +25,7 @@ const BlogPost: React.FC<{ data: BlogPostQuery }> = ({ data }) => {
     <Layout>
       <SEO title={title} type="article" meta={tagsSEO} />
       <article>
-        <h2>{title}</h2>
+        <h1>{title}</h1>
         <time dateTime={date}>{date}</time>
         <section>
           <>

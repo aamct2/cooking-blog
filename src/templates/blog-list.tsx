@@ -24,7 +24,7 @@ const BlogList: React.FC<{
   return (
     <Layout>
       <SEO title="Blog" />
-      <h2>Blog</h2>
+      <h1>Blog</h1>
 
       {posts.map(({ node }) => {
         return (

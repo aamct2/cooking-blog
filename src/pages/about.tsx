@@ -9,7 +9,7 @@ const About: React.FC = () => {
   return (
     <Layout>
       <SEO title="About" />
-      <h2>About</h2>
+      <h1>About</h1>
       <section>
         <p>
           In 2020 I decided to learn more about making French pastry. I picked

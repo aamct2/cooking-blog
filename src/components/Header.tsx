@@ -1,5 +1,6 @@
 import './Header.scss'
 import { Link } from 'gatsby'
+import NavBar from './NavBar'
 import React from 'react'
 
 /**
@@ -7,10 +8,11 @@ import React from 'react'
  * @param siteTitle Title of the website
  */
 const Header: React.FC<{ siteTitle: string }> = ({ siteTitle }) => (
-  <header className="Header">
-    <h1 style={{ margin: 0 }}>
+  <header>
+    <div className="SiteTitle">
       <Link to="/">{siteTitle}</Link>
-    </h1>
+    </div>
+    <NavBar />
   </header>
 )
 

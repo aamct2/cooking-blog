@@ -23,7 +23,7 @@ const Tags: React.FC<{ pageContext: { tag: string }; data: TagsQuery }> = ({
         title={tag}
         description={`List of blog posts tagged with '${tag}'`}
       />
-      <h2>{tagHeader}</h2>
+      <h1>{tagHeader}</h1>
       <ol>
         {edges.map(({ node }) => {
           const slug = node.fields.slug
