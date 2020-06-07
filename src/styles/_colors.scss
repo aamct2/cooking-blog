@@ -27,8 +27,12 @@ $buff-80: color.scale($buff, $lightness: -80%); // 80% darker
 $interactive-01: $buff;
 /// Pimrary interactive elements/buttons - hover state
 $interactive-01-hover: $buff-20;
+/// Text on interactive elements/buttons
+$interactive-01-text: $buff-80;
+/// High contrast border / background
+$ui-05: $blue-yonder;
+/// Text on high contrast background
+$ui-05-text: white;
 
 /// Primary text
 $text-01: black;
-/// Text on interactive elements/buttons
-$text-04: $buff-80;

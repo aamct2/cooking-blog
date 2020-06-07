@@ -1,12 +1,12 @@
 @use '../styles/colors';
 
 footer {
-  background-color: colors.$blue-yonder;
-  color: white;
+  background-color: colors.$ui-05;
+  color: colors.$ui-05-text;
   padding: 1em;
   text-align: center;
 
   a {
-    color: white;
+    color: colors.$ui-05-text;
   }
 }

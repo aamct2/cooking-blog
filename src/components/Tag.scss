@@ -1,5 +1,4 @@
 @use '../styles/colors';
-@use "sass:color";
 
 .Tag {
   align-items: center;
@@ -24,5 +23,5 @@
 
 .TagLink {
   text-decoration: none;
-  color: colors.$text-04;
+  color: colors.$interactive-01-text;
 }
