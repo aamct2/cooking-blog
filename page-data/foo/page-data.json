@@ -1,1 +1,0 @@
-{"componentChunkName":"component---src-templates-blog-post-tsx","path":"/foo/","result":{"data":{"markdownRemark":{"html":"<p>Foo text</p>","frontmatter":{"title":"Foo","date":"2020-06-04","tags":["pastries","creams"]}}},"pageContext":{"slug":"/foo/"}}}
