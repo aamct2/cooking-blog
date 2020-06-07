@@ -3,11 +3,8 @@
 
 .Tag {
   align-items: center;
-  background-color: colors.$buff;
-  border-color: black;
+  background-color: colors.$interactive-01;
   border-radius: 1rem;
-  border-width: thin;
-  border-style: solid;
   display: inline-flex;
   justify-content: center;
   min-height: 1.5rem;
@@ -21,11 +18,11 @@
   }
 
   &:hover {
-    background-color: color.scale(colors.$buff, $lightness: -30%);
+    background-color: colors.$interactive-01-hover;
   }
 }
 
 .TagLink {
   text-decoration: none;
-  color: black;
+  color: colors.$text-04;
 }

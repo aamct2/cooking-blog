@@ -1,5 +1,34 @@
+// Heavily influenced by https://www.carbondesignsystem.com/guidelines/color
+
+@use "sass:color";
+
+/****************
+*  Base colors  *
+****************/
+
 $blue-yonder: #586ba4ff;
 $dark-cornflower-blue: #324376ff;
 $buff: #f5dd90ff;
 $atomic-tangerine: #f68e5fff;
 $bittersweet: #f76c5eff;
+
+/***************
+*  Gradations  *
+***************/
+
+$buff-20: color.scale($buff, $lightness: -20%); // 20% darker
+$buff-80: color.scale($buff, $lightness: -80%); // 80% darker
+
+/****************
+*  Core tokens  *
+****************/
+
+/// Primary interactive elements/buttons
+$interactive-01: $buff;
+/// Pimrary interactive elements/buttons - hover state
+$interactive-01-hover: $buff-20;
+
+/// Primary text
+$text-01: black;
+/// Text on interactive elements/buttons
+$text-04: $buff-80;
