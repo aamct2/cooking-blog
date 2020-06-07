@@ -39,7 +39,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -H $(hostname) -p 8000",
     "format": "npm run format:eslint && npm run format:prettier && npm run format:spelling",
     "format:eslint": "eslint --fix \"**/*.{js,jsx,ts,tsx,json}\"",
     "format:prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,scss}\"",
