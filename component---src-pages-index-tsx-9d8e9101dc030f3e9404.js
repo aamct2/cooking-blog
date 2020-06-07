@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{QeBL:function(e,n,o){"use strict";o.r(n);var t=o("q1tI"),a=o.n(t),c=o("9Dj+"),l=o("H8eV");n.default=function(){return a.a.createElement(c.a,null,a.a.createElement(l.a,{title:"Home"}),a.a.createElement("h1",null,"Welcome to Aaron's cooking blog"),a.a.createElement("p",null,"This site contains a record of some of my cooking and baking projects."))}}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-9d8e9101dc030f3e9404.js.map
