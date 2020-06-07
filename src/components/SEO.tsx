@@ -41,6 +41,13 @@ interface SEOInput {
    * Type of page. Defaults to `website`.
    */
   type?: string
+  /**
+   * Additional `<script>` data.
+   */
+  script?: {
+    type: string
+    content: string
+  }
 }
 
 /**
@@ -110,7 +117,11 @@ function SEO(seoInput: SEOInput): JSX.Element {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      {seoInput.script && (
+        <script type={seoInput.script.type}>{seoInput.script.content}</script>
+      )}
+    </Helmet>
   )
 }
 

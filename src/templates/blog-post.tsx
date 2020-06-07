@@ -8,6 +8,30 @@ import { graphql } from 'gatsby'
 import kebabCase from 'lodash/kebabCase'
 
 /**
+ * Generates the Schema.org SEO for the blog
+ * @param title Title of the blog post
+ * @param date Date of the blog post
+ */
+function blogSEO(
+  title: string,
+  date: string
+): {
+  type: string
+  content: string
+} {
+  return {
+    type: 'application/ld+json',
+    content: JSON.stringify({
+      '@context': 'http://schema.org',
+      '@type': 'BlogPosting',
+      datePublished: date,
+      name: title,
+      headline: title,
+    }),
+  }
+}
+
+/**
  * Page template for a single blog post
  */
 const BlogPost: React.FC<{ data: BlogPostQuery }> = ({ data }) => {
@@ -21,10 +45,11 @@ const BlogPost: React.FC<{ data: BlogPostQuery }> = ({ data }) => {
       content: tag ?? '',
     }
   })
+  const schemaSEO = blogSEO(title, date)
 
   return (
     <Layout>
-      <SEO title={title} type="article" meta={tagsSEO} />
+      <SEO title={title} type="article" meta={tagsSEO} script={schemaSEO} />
       <article>
         <h1>{title}</h1>
         <time dateTime={date}>{date}</time>
