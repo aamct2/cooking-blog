@@ -3,6 +3,7 @@ module.exports = {
     title: "Aaron's cooking blog",
     description: 'A blog about some of my cooking and baking adventures.',
     author: 'Aaron McTavish',
+    siteUrl: 'https://cooking.aamct.me',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
