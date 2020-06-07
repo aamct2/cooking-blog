@@ -6,8 +6,14 @@
   min-height: 100vh;
 
   main {
-    padding-left: 1em;
-    padding-right: 1em;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: min-content;
+
+    * {
+      grid-column-start: 2;
+      grid-column-end: 12;
+    }
 
     a {
       color: colors.$link-01;
