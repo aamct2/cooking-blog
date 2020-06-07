@@ -1,3 +1,4 @@
+import './blog-post.scss'
 import { Link, graphql } from 'gatsby'
 import { BlogPostQuery } from './__generated__/BlogPostQuery'
 import Layout from '../components/Layout'
@@ -28,15 +29,17 @@ const BlogPost: React.FC<{ data: BlogPostQuery }> = ({ data }) => {
         <h1>{title}</h1>
         <time dateTime={date}>{date}</time>
         <section>
-          <>
+          <ul className="BlogTagsList">
             {tags.map(tag => {
               return (
-                <Link to={`/tags/${kebabCase(tag ?? '')}/`} key={tag ?? ''}>
-                  <Tag>{tag}</Tag>
-                </Link>
+                <li key={tag ?? ''}>
+                  <Link to={`/tags/${kebabCase(tag ?? '')}/`}>
+                    <Tag>{tag}</Tag>
+                  </Link>
+                </li>
               )
             })}
-          </>
+          </ul>
         </section>
         <section
           dangerouslySetInnerHTML={{ __html: post?.html ?? 'Missing body' }}
