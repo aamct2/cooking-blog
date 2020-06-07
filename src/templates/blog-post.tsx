@@ -38,7 +38,7 @@ const BlogPost: React.FC<{ data: BlogPostQuery }> = ({ data }) => {
             })}
           </>
         </section>
-        <div
+        <section
           dangerouslySetInnerHTML={{ __html: post?.html ?? 'Missing body' }}
         />
       </article>
