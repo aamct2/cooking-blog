@@ -32,10 +32,6 @@ function blogSEO(
       datePublished: date,
       headline: title,
       name: title,
-      publisher: {
-        '@type': 'Person',
-        name: author,
-      },
     }),
   }
 }
