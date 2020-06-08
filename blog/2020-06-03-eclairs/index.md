@@ -1,6 +1,7 @@
 ---
 title: Éclairs
 date: 2020-06-03
+featuredImage: eclairs_plate.jpg
 tags: ['pastries', 'creams']
 ---
 

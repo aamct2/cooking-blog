@@ -29,6 +29,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     type Frontmatter @infer {
       title: String!
       date: Date! @dateformat
+      featuredImage: File! @fileByRelativePath
     }
 
     type Site implements Node @infer {

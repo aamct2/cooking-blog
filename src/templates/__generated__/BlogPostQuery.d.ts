@@ -9,15 +9,29 @@
 
 export interface BlogPostQuery_siteData_siteMetadata {
   author: string
+  siteUrl: string
 }
 
 export interface BlogPostQuery_siteData {
   siteMetadata: BlogPostQuery_siteData_siteMetadata
 }
 
+export interface BlogPostQuery_post_frontmatter_featuredImage_childImageSharp_fixed {
+  src: string
+}
+
+export interface BlogPostQuery_post_frontmatter_featuredImage_childImageSharp {
+  fixed: BlogPostQuery_post_frontmatter_featuredImage_childImageSharp_fixed | null
+}
+
+export interface BlogPostQuery_post_frontmatter_featuredImage {
+  childImageSharp: BlogPostQuery_post_frontmatter_featuredImage_childImageSharp | null
+}
+
 export interface BlogPostQuery_post_frontmatter {
   title: string
   date: any
+  featuredImage: BlogPostQuery_post_frontmatter_featuredImage
   tags: (string | null)[] | null
 }
 

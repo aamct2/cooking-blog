@@ -1,6 +1,7 @@
 ---
 title: Langues de chat
 date: 2020-06-07
+featuredImage: cookies_plate.jpg
 tags: ['biscuits']
 ---
 

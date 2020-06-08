@@ -15,7 +15,8 @@ import kebabCase from 'lodash/kebabCase'
 function blogSEO(
   title: string,
   date: string,
-  author: string
+  author: string,
+  imageURL?: string
 ): {
   type: string
   content: string
@@ -32,6 +33,7 @@ function blogSEO(
       datePublished: date,
       headline: title,
       name: title,
+      image: imageURL,
     }),
   }
 }
@@ -44,6 +46,11 @@ const BlogPost: React.FC<{ data: BlogPostQuery }> = ({ data }) => {
   const title = post?.frontmatter.title ?? 'Missing title'
   const date = (post?.frontmatter.date as string) ?? ''
   const author = data.siteData?.siteMetadata.author ?? ''
+  const imageRelativeURL =
+    post?.frontmatter.featuredImage.childImageSharp?.fixed?.src
+  const siteURL = data.siteData?.siteMetadata.siteUrl
+  const imageURL =
+    siteURL && imageRelativeURL ? siteURL + imageRelativeURL : undefined
   const tags = (post?.frontmatter?.tags ?? []).sort()
   const tagsSEO = tags.map(tag => {
     return {
@@ -51,11 +58,17 @@ const BlogPost: React.FC<{ data: BlogPostQuery }> = ({ data }) => {
       content: tag ?? '',
     }
   })
-  const schemaSEO = blogSEO(title, date, author)
+  const schemaSEO = blogSEO(title, date, author, imageURL)
 
   return (
     <Layout>
-      <SEO title={title} type="article" meta={tagsSEO} script={schemaSEO} />
+      <SEO
+        title={title}
+        imageURL={imageURL}
+        type="article"
+        meta={tagsSEO}
+        script={schemaSEO}
+      />
       <article>
         <h1>{title}</h1>
         <time dateTime={date}>{date}</time>
@@ -88,6 +101,7 @@ export const query = graphql`
     siteData: site {
       siteMetadata {
         author
+        siteUrl
       }
     }
     post: markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -95,6 +109,13 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "yyyy-MM-DD")
+        featuredImage {
+          childImageSharp {
+            fixed(width: 240) {
+              src
+            }
+          }
+        }
         tags
       }
     }

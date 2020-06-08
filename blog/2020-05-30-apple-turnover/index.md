@@ -1,6 +1,7 @@
 ---
 title: Apple Turnover
 date: 2020-05-31
+featuredImage: apple_turnover_plate.jpg
 tags: ['pastries']
 ---
 
