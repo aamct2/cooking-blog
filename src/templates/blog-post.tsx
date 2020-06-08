@@ -27,8 +27,9 @@ function blogSEO(
       '@type': 'BlogPosting',
       author: author,
       datePublished: date,
-      name: title,
       headline: title,
+      name: title,
+      publisher: author,
     }),
   }
 }
