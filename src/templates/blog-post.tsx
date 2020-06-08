@@ -25,11 +25,17 @@ function blogSEO(
     content: JSON.stringify({
       '@context': 'http://schema.org',
       '@type': 'BlogPosting',
-      author: author,
+      author: {
+        '@type': 'Person',
+        name: author,
+      },
       datePublished: date,
       headline: title,
       name: title,
-      publisher: author,
+      publisher: {
+        '@type': 'Person',
+        name: author,
+      },
     }),
   }
 }
