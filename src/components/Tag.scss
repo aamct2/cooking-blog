@@ -2,7 +2,7 @@
 
 .Tag {
   align-items: center;
-  background-color: colors.$interactive-01;
+  @include colors.themed('background-color', colors.$interactive-01);
   border-radius: 1rem;
   display: inline-flex;
   justify-content: center;
@@ -17,11 +17,11 @@
   }
 
   &:hover {
-    background-color: colors.$interactive-01-hover;
+    @include colors.themed('background-color', colors.$interactive-01-hover);
   }
 }
 
 .TagLink {
   text-decoration: none;
-  color: colors.$interactive-01-text !important;
+  @include colors.themed('color', colors.$interactive-01-text, '!important');
 }

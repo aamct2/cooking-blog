@@ -19,26 +19,79 @@ $bittersweet: #f76c5eff;
 ***************/
 
 $buff-20: color.scale($buff, $lightness: -20%); // 20% darker
+$buff-40: color.scale($buff, $lightness: -40%); // 40% darker
+$buff-50: color.scale($buff, $lightness: -50%); // 50% darker
+$buff-60: color.scale($buff, $lightness: -60%); // 60% darker
 $buff-80: color.scale($buff, $lightness: -80%); // 80% darker
+$grey-20: color.scale(white, $lightness: -20%);
+$atomic-tangerine-40: color.scale($atomic-tangerine, $lightness: -40%);
 
 /****************
 *  Core tokens  *
 ****************/
 
-/// Default page background
-$ui-background: white;
-/// Primary interactive elements/buttons
-$interactive-01: $buff;
-/// Pimrary interactive elements/buttons - hover state
-$interactive-01-hover: $buff-20;
-/// Text on interactive elements/buttons
-$interactive-01-text: $buff-80;
-/// High contrast border / background
-$ui-05: $blue-yonder;
-/// Text on high contrast background
-$ui-05-text: white;
-/// Primary links
-$link-01: $dark-cornflower-blue;
+$light-theme: 'light-theme';
+$dark-theme: 'dark-theme';
 
-/// Primary text
-$text-01: black;
+$ui-background: 'ui-background';
+$interactive-01: 'interactive-01';
+$interactive-01-hover: 'interactive-01-hover';
+$interactive-01-text: 'interactive-01-text';
+$ui-05: 'ui-05';
+$ui-05-text: 'ui-05-text';
+$link-01: 'link-01';
+$text-01: 'text-01';
+
+$themes: (
+  $light-theme: (
+    /// Default page background
+      $ui-background: white,
+    /// Primary interactive elements/buttons
+      $interactive-01: $buff,
+    /// Pimrary interactive elements/buttons - hover state
+      $interactive-01-hover: $buff-20,
+    /// Text on interactive elements/buttons
+      $interactive-01-text: $buff-80,
+    /// High contrast border / background
+      $ui-05: $blue-yonder,
+    /// Text on high contrast background
+      $ui-05-text: white,
+    /// Primary links
+      $link-01: $dark-cornflower-blue,
+    /// Primary text
+      $text-01: black,
+  ),
+  $dark-theme: (
+    /// Default page background
+      $ui-background: black,
+    /// Primary interactive elements/buttons
+      $interactive-01: $buff-80,
+    /// Pimrary interactive elements/buttons - hover state
+      $interactive-01-hover: $buff-60,
+    /// Text on interactive elements/buttons
+      $interactive-01-text: white,
+    /// High contrast border / background
+      $ui-05: $dark-cornflower-blue,
+    /// Text on high contrast background
+      $ui-05-text: $grey-20,
+    /// Primary links
+      $link-01: $atomic-tangerine-40,
+    /// Primary text
+      $text-01: $grey-20,
+  ),
+);
+
+/*****************
+*  Theme mixins  *
+*****************/
+
+@mixin themed($property, $color, $additionalProperties: '') {
+  $light: map-get($themes, $light-theme);
+  $dark: map-get($themes, $dark-theme);
+
+  #{$property}: unquote(map-get($light, $color) + ' ' + $additionalProperties);
+
+  @media (prefers-color-scheme: dark) {
+    #{$property}: unquote(map-get($dark, $color) + ' ' + $additionalProperties);
+  }
+}

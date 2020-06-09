@@ -35,7 +35,7 @@
     }
 
     a {
-      color: colors.$link-01;
+      @include colors.themed('color', colors.$link-01);
     }
   }
 }

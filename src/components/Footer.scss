@@ -1,8 +1,8 @@
 @use '../styles/colors';
 
 footer {
-  background-color: colors.$ui-05;
-  color: colors.$ui-05-text;
+  @include colors.themed('background-color', colors.$ui-05);
+  @include colors.themed('color', colors.$ui-05-text);
   padding-bottom: calc(1em + env(safe-area-inset-bottom));
   padding-left: 1em;
   padding-right: 1em;
@@ -10,6 +10,6 @@ footer {
   text-align: center;
 
   a {
-    color: colors.$ui-05-text;
+    @include colors.themed('color', colors.$ui-05-text);
   }
 }
