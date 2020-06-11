@@ -81,6 +81,7 @@ function SEO(seoInput: SEOInput): JSX.Element {
             title
             description
             author
+            siteUrl
           }
         }
       }
@@ -93,6 +94,8 @@ function SEO(seoInput: SEOInput): JSX.Element {
   const meta = seoInput.meta ?? []
   const title = seoInput.title
   const type = seoInput.type ?? 'website'
+  const rssURL = (site?.siteMetadata.siteUrl ?? '') + '/rss.xml'
+  const siteTitle = site?.siteMetadata.title ?? ''
 
   if (seoInput.imageURL) {
     meta.push({
@@ -142,6 +145,14 @@ function SEO(seoInput: SEOInput): JSX.Element {
           content: metaDescription,
         },
       ].concat(meta)}
+      link={[
+        {
+          rel: 'alternate',
+          type: 'application/rss+xml',
+          title: siteTitle,
+          href: rssURL,
+        },
+      ]}
     >
       {seoInput.script && (
         <script type={seoInput.script.type}>{seoInput.script.content}</script>

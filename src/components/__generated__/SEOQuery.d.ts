@@ -11,6 +11,7 @@ export interface SEOQuery_site_siteMetadata {
   title: string
   description: string
   author: string
+  siteUrl: string
 }
 
 export interface SEOQuery_site {
