@@ -45,6 +45,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-feed',
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-codegen',
   ],
 }
