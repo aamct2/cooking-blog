@@ -50,7 +50,7 @@ npm run format
 
 ## Deployment
 
-This site is deployed on commits to `master` via GitHub Actions to GitHub Pages on the `gh-pages` branch.
+This site is deployed on commits to `trunk` via GitHub Actions to GitHub Pages on the `gh-pages` branch.
 
 ## License
 
