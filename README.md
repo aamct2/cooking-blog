@@ -1,5 +1,7 @@
 # cooking-blog
 
+![Publish](https://github.com/aamct2/cooking-blog/workflows/Publish/badge.svg)
+
 A blog to record some of my cooking and baking adventures.
 
 ## Getting started
@@ -14,7 +16,7 @@ npm install
 
 to install the dependencies.
 
-## Development and deploying
+## Development
 
 ### Local development
 
@@ -45,6 +47,10 @@ To run the linters run
 ```bash
 npm run format
 ```
+
+## Deployment
+
+This site is deployed on commits to `master` via GitHub Actions to GitHub Pages on the `gh-pages` branch.
 
 ## License
 
