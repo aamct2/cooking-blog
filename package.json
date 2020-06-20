@@ -56,8 +56,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/aamct2/cooking-blog"
-  },
-  "bugs": {
-    "url": "https://github.com/aamct2/cooking-blog/issues"
   }
 }
