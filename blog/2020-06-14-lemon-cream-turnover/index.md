@@ -13,6 +13,6 @@ I made the lemon pastry cream the night before. I decided to do this to give it 
 
 ![Lemon cream turnovers on a cooling rack](lemon_turnovers_cooling.jpg)
 
-![A lemon cream turnover on a plate with bacnon](lemon_turnover_plate.jpg)
+![A lemon cream turnover on a plate with bacon](lemon_turnover_plate.jpg)
 
 Recipe from [French Pâtisserie: Master Recipes and Techniques from the Ferrandi School of Culinary Arts](https://www.amazon.co.uk/French-Pâtisserie-Techniques-Ferrandi-Culinary/dp/2080203185).
