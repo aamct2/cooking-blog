@@ -5,7 +5,7 @@ featuredImage: cookies_plate.jpg
 tags: ['biscuits']
 ---
 
-This morning I baked langues de chat (also called cat tongue cookies). They turned out well.
+This morning I baked <span lang="fr">langues de chat</span> (also called cat tongue cookies). They turned out well.
 
 I didn't leave the butter long enough to come up to room temperature. I used a double-boiler to help warm it up ever so slightly to get everything to the correct consistency.
 

@@ -5,7 +5,7 @@ featuredImage: sables_diamants_plate.jpg
 tags: ['biscuits']
 ---
 
-Biscuits were the bake of the day today. I made sablés diamants (a type of French shortbread). They taste much lighter than most Scottish shortbreads I've had.
+Biscuits were the bake of the day today. I made <span lang="fr">sablés diamants</span> (a type of French shortbread). They taste much lighter than most Scottish shortbreads I've had.
 
 They turned out quite well over all. The only thing I'd do differently is to try to get them more perfectly round.
 
