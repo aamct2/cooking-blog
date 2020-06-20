@@ -1,3 +1,4 @@
+import './tag.scss'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import React from 'react'
