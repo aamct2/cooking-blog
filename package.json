@@ -50,6 +50,7 @@
     "format:markdown": "markdownlint \"blog/**/*.md\"",
     "format:prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,scss}\"",
     "format:spelling": "mdspell './blog/**/*.md' --en-gb --report",
+    "preinstall": "npx npm-force-resolutions",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
@@ -58,5 +59,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/aamct2/cooking-blog"
+  },
+  "resolutions": {
+    "marked": "0.8.2"
   }
 }
