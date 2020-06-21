@@ -27,6 +27,14 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install dependencies
         run: npm ci
+      - name: Linting (ESLint)
+        run: npm run format:eslint:ci
+      - name: Linting (Prettier)
+        run: npm run format:prettier:ci
+      - name: Linting (markdownlint)
+        run: npm run format:markdown
+      - name: Linting (Spelling)
+        run: npm run format:spelling
       - name: Build site
         run: npm run build
       - name: Deploy site
