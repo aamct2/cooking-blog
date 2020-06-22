@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby'
-import BlogSummary from '../components/BlogSummary'
+import BlogCard from '../components/BlogCard'
 import { IndexQuery } from './__generated__/IndexQuery'
 import Layout from '../components/Layout'
 import React from 'react'
@@ -21,10 +21,10 @@ const IndexPage: React.FC = () => {
       <section>
         <h2>Recent Posts</h2>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <BlogSummary
+          <BlogCard
             date={node.frontmatter.date}
-            excerpt={node.excerpt}
             key={node.id}
+            image={node.frontmatter.featuredImage.childImageSharp?.fixed?.src}
             slug={node.fields.slug}
             title={node.frontmatter.title}
           />
@@ -49,11 +49,17 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "yyyy-MM-DD")
+            featuredImage {
+              childImageSharp {
+                fixed(width: 720) {
+                  src
+                }
+              }
+            }
           }
           fields {
             slug
           }
-          excerpt
         }
       }
     }
