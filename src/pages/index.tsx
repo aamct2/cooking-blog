@@ -1,7 +1,10 @@
+import Layout from '../components/Layout'
+// This must be imported first to ensure CSS order in production builds
+
+// eslint-disable-next-line sort-imports
 import { graphql, useStaticQuery } from 'gatsby'
 import BlogCard from '../components/BlogCard'
 import { IndexQuery } from './__generated__/IndexQuery'
-import Layout from '../components/Layout'
 import React from 'react'
 import SEO from '../components/SEO'
 
