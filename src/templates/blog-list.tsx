@@ -1,7 +1,10 @@
-import { Link, graphql } from 'gatsby'
-import { BlogListQuery } from './__generated__/BlogListQuery'
-import BlogSummary from '../components/BlogSummary'
 import Layout from '../components/Layout'
+// This must be imported first to ensure CSS order in production builds
+
+// eslint-disable-next-line sort-imports
+import { Link, graphql } from 'gatsby'
+import BlogCard from '../components/BlogCard'
+import { BlogListQuery } from './__generated__/BlogListQuery'
 import React from 'react'
 import SEO from '../components/SEO'
 
@@ -28,10 +31,10 @@ const BlogList: React.FC<{
 
       {posts.map(({ node }) => {
         return (
-          <BlogSummary
+          <BlogCard
             date={node.frontmatter.date}
-            excerpt={node.excerpt}
             key={node.id}
+            image={node.frontmatter.featuredImage.childImageSharp?.fixed?.src}
             slug={node.fields.slug}
             title={node.frontmatter.title}
           />
@@ -72,11 +75,17 @@ export const blogListQuery = graphql`
           frontmatter {
             title
             date(formatString: "yyyy-MM-DD")
+            featuredImage {
+              childImageSharp {
+                fixed(width: 720) {
+                  src
+                }
+              }
+            }
           }
           fields {
             slug
           }
-          excerpt
         }
       }
     }

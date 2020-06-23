@@ -7,9 +7,22 @@
 // GraphQL query operation: BlogListQuery
 // ====================================================
 
+export interface BlogListQuery_allMarkdownRemark_edges_node_frontmatter_featuredImage_childImageSharp_fixed {
+  src: string
+}
+
+export interface BlogListQuery_allMarkdownRemark_edges_node_frontmatter_featuredImage_childImageSharp {
+  fixed: BlogListQuery_allMarkdownRemark_edges_node_frontmatter_featuredImage_childImageSharp_fixed | null
+}
+
+export interface BlogListQuery_allMarkdownRemark_edges_node_frontmatter_featuredImage {
+  childImageSharp: BlogListQuery_allMarkdownRemark_edges_node_frontmatter_featuredImage_childImageSharp | null
+}
+
 export interface BlogListQuery_allMarkdownRemark_edges_node_frontmatter {
   title: string
   date: any
+  featuredImage: BlogListQuery_allMarkdownRemark_edges_node_frontmatter_featuredImage
 }
 
 export interface BlogListQuery_allMarkdownRemark_edges_node_fields {
@@ -20,7 +33,6 @@ export interface BlogListQuery_allMarkdownRemark_edges_node {
   id: string
   frontmatter: BlogListQuery_allMarkdownRemark_edges_node_frontmatter
   fields: BlogListQuery_allMarkdownRemark_edges_node_fields
-  excerpt: string | null
 }
 
 export interface BlogListQuery_allMarkdownRemark_edges {
