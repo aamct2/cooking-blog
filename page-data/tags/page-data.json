@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-tags-tsx","path":"/tags/","result":{"data":{"allMarkdownRemark":{"group":[{"fieldValue":"biscuits","totalCount":2},{"fieldValue":"creams","totalCount":2},{"fieldValue":"pastries","totalCount":4}]}},"pageContext":{}}}
+{"componentChunkName":"component---src-pages-tags-tsx","path":"/tags/","result":{"data":{"allMarkdownRemark":{"group":[{"fieldValue":"biscuits","totalCount":3},{"fieldValue":"creams","totalCount":2},{"fieldValue":"pastries","totalCount":4}]}},"pageContext":{}}}
