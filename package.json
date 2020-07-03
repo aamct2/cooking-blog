@@ -23,7 +23,7 @@
     "sass": "1.26.9"
   },
   "devDependencies": {
-    "@types/react": "16.9.38",
+    "@types/react": "16.9.41",
     "@types/react-helmet": "6.0.0",
     "@typescript-eslint/eslint-plugin": "3.5.0",
     "@typescript-eslint/parser": "3.5.0",
@@ -37,9 +37,9 @@
     "gh-pages": "3.0.0",
     "husky": "4.2.5",
     "markdown-spellcheck": "1.3.1",
-    "markdownlint-cli": "0.23.1",
+    "markdownlint-cli": "0.23.2",
     "prettier": "2.0.5",
-    "typescript": "3.9.5"
+    "typescript": "3.9.6"
   },
   "license": "MIT",
   "scripts": {
