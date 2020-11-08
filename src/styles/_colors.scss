@@ -46,51 +46,51 @@ $text-01: 'text-01';
 $themes: (
   $light-theme: (
     /// Default page background
-      $ui-background: white,
+    $ui-background: white,
     /// Primary interactive elements/buttons
-      $interactive-01: $buff,
+    $interactive-01: $buff,
     /// Pimrary interactive elements/buttons - hover state
-      $interactive-01-hover: $buff-20,
+    $interactive-01-hover: $buff-20,
     /// Text on interactive elements/buttons
-      $interactive-01-text: $buff-80,
+    $interactive-01-text: $buff-80,
     /// High contrast border / background
-      $ui-05: $blue-yonder,
+    $ui-05: $blue-yonder,
     /// Text on high contrast background
-      $ui-05-text: white,
+    $ui-05-text: white,
     /// Overlay semi-transparent background
-      $ui-overlay:
+    $ui-overlay:
       rgba(
         $color: white,
         $alpha: 0.6,
       ),
     /// Primary links
-      $link-01: $dark-cornflower-blue,
+    $link-01: $dark-cornflower-blue,
     /// Primary text
-      $text-01: black,
+    $text-01: black,
   ),
   $dark-theme: (
     /// Default page background
-      $ui-background: black,
+    $ui-background: black,
     /// Primary interactive elements/buttons
-      $interactive-01: $buff-80,
+    $interactive-01: $buff-80,
     /// Pimrary interactive elements/buttons - hover state
-      $interactive-01-hover: $buff-60,
+    $interactive-01-hover: $buff-60,
     /// Text on interactive elements/buttons
-      $interactive-01-text: white,
+    $interactive-01-text: white,
     /// High contrast border / background
-      $ui-05: $dark-cornflower-blue,
+    $ui-05: $dark-cornflower-blue,
     /// Text on high contrast background
-      $ui-05-text: $grey-20,
+    $ui-05-text: $grey-20,
     /// Overlay semi-transparent background
-      $ui-overlay:
+    $ui-overlay:
       rgba(
         $color: black,
         $alpha: 0.6,
       ),
     /// Primary links
-      $link-01: $atomic-tangerine,
+    $link-01: $atomic-tangerine,
     /// Primary text
-      $text-01: $grey-20,
+    $text-01: $grey-20,
   ),
 );
 
